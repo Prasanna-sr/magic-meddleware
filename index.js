@@ -24,4 +24,8 @@ app.get('/magic', function(req, res) {
   res.send('ok');
 });
 
+app.get('/config', function(req, res){
+  res.send(config);
+});
+
 http.createServer(app).listen(3000);

@@ -21,7 +21,7 @@
 
   </head>
 
-  <body>
+  <body data-ng-app='magic'>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -54,6 +54,7 @@
             <p>module: <%= config[middleware].module.name%></p>
             enabled: <%= config[middleware].enabled%>
             priority: <%= config[middleware].priority%>
+            <button>disable</button>
           </div>
         <% }%>
       </div>
@@ -67,5 +68,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.2.16/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
