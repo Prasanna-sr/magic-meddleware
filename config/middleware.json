@@ -1,0 +1,10 @@
+{
+    "cookieParser": {
+        "enabled": true,
+        "priority": 40,
+        "module": {
+            "name": "cookie-parser",
+            "arguments": ["keyboard cat"]
+        }
+    }
+}
