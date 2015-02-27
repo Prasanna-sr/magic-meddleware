@@ -1,6 +1,6 @@
 {
     "cookieParser": {
-        "enabled": false,
+        "enabled": true,
         "priority": 40,
         "module": {
             "name": "cookie-parser",
@@ -8,7 +8,7 @@
         }
     },
     "prk": {
-        "enabled": false,
+        "enabled": true,
         "priority": 51,
         "module": {
             "name": "prk",

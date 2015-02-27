@@ -11,6 +11,6 @@
   "dependencies": {
     "express": "^4.12.0",
     "shush": "0.0.1",
-    "meddleware": "^3.0.0"
+    "meddleware": "git+https://github.com/Prasanna-sr/meddleware.git"
   }
 }
