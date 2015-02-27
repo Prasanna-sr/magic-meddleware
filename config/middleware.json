@@ -1,10 +1,18 @@
 {
     "cookieParser": {
-        "enabled": true,
+        "enabled": false,
         "priority": 40,
         "module": {
             "name": "cookie-parser",
             "arguments": ["keyboard cat"]
+        }
+    },
+    "prk": {
+        "enabled": false,
+        "priority": 51,
+        "module": {
+            "name": "prk",
+            "arguments": ["ninJaS asdsa"]
         }
     }
 }
