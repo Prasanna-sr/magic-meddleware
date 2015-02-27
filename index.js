@@ -1,7 +1,8 @@
 var http = require('http'),
     path = require('path'),
     express = require('express'),
-    meddleware = require('meddleware');
+    meddleware = require('meddleware'),
+    bodyParser = require('body-parser');
 
 var config = require('shush')('./config/middleware');
 
@@ -10,8 +11,9 @@ app.engine('.html', require('ejs').__express);
 app.set('views', './views');
 app.set('view engine', 'html');
 app.use('/', express.static(path.join(__dirname, './public')));
-
+app.use(bodyParser.json());
 app.use(meddleware(config));
+
 
 var router = express.Router();
 
