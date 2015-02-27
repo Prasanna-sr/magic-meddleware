@@ -6,13 +6,5 @@
             "name": "cookie-parser",
             "arguments": ["keyboard cat"]
         }
-    },
-    "prk": {
-        "enabled": true,
-        "priority": 51,
-        "module": {
-            "name": "prk",
-            "arguments": ["ninJaS asdsa"]
-        }
     }
 }

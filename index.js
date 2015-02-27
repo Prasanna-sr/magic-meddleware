@@ -1,10 +1,15 @@
 var http = require('http'),
+    path = require('path'),
     express = require('express'),
     meddleware = require('meddleware');
 
 var config = require('shush')('./config/middleware');
 
 var app = express();
+app.engine('.html', require('ejs').__express);
+app.set('views', './views');
+app.set('view engine', 'html');
+app.use('/', express.static(path.join(__dirname, './public')));
 
 app.use(meddleware(config));
 
@@ -19,7 +24,7 @@ router.use(function(req, res, next) {
 });
 
 
-router.get('/', function(req, res) {
+router.get('/cookie', function(req, res) {
     console.log("Cookies: ", req.cookies);
     //console.log(app._router.stack);
     res.send('ok');
@@ -42,4 +47,5 @@ router.get('/test', function(req, res) {
 	res.send('test');
 });
 
-http.createServer(app).listen(8080);
+
+http.createServer(app).listen(3000);
