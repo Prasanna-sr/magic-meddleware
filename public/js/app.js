@@ -13,4 +13,8 @@ angular.module('controllers').controller('configController', ['$scope', '$http',
     console.log(response.data);
     $scope.config = response.data
   });
+
+  $scope.itemClick = function(name){
+    console.log(name);
+  };
 }]);

@@ -6,5 +6,22 @@
             "name": "cookie-parser",
             "arguments": ["keyboard cat"]
         }
+    },
+    "logger": {
+        "enabled": true,
+        "priority": 50,
+        "module": {
+            "name": "morgan",
+            "arguments": [ "combined" ]
+        }
+    },
+
+    "json": {
+        "enabled": true,
+        "priority": 60,
+        "module": {
+            "name": "body-parser",
+            "method": "json"
+        }
     }
 }

@@ -44,21 +44,22 @@
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container" data-ng-controller="configController">
 
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-        <% for (var middleware in config ){ %>
-          <div>
-            <p>module: <%= config[middleware].module.name%></p>
-            enabled: <%= config[middleware].enabled%>
-            priority: <%= config[middleware].priority%>
-            <button>disable</button>
-          </div>
-        <% }%>
+        <h1>ninJas Config</h1>
       </div>
-
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+          Dropdown
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu " role="menu" aria-labelledby="dropdownMenu1">
+          <li role="presentation" data-ng-repeat="(key, value) in config">
+            <a role="menuitem" tabindex="-1" href="#" ng-click='itemClick(value.module.name)'>{{value.module.name}}</a>
+          </li>
+        </ul>
+      </div>
     </div><!-- /.container -->
 
 
