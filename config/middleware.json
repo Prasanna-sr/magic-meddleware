@@ -1,10 +1,36 @@
 {
     "cookieParser": {
         "enabled": true,
-        "priority": 40,
+        "priority": 1,
         "module": {
             "name": "cookie-parser",
-            "arguments": ["keyboard cat"]
+            "arguments": [
+                "keyboard cat"
+            ]
+        }
+    },
+    "requestLogger": {
+        "enabled": true,
+        "priority": 2,
+        "module": {
+            "name": "ancestry-request-logger",
+            "method": "incomingRequest",
+            "arguments": [
+                {
+                    "componentId": "prk_app",
+                    "filePath": "/var/log/ancestry_log/prk.log"
+                }
+            ]
+        }
+    },
+    "serve-static": {
+        "enabled": true,
+        "priority": 3,
+        "module": {
+            "name": "serve-static",
+            "arguments": [
+                "public"
+            ]
         }
     }
 }
